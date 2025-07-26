@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Portal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.unsplash.com/photo-1584291527932-0c1fd7e9f7aa?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #portal {
+            display: none;
+            text-align: center;
+        }
+
+        .hidden-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            opacity: 0.05;
+            cursor: pointer;
+        }
+
+        a {
+            color: #80dfff;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+
+        input[type="password"] {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 5px 10px;
+            background-color: #1a1a1a;
+            color: white;
+            border: 1px solid #444;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="hidden-button" onclick="unlock()"></div>
+
+    <div id="login">
+        <h1>Enter Password</h1>
+        <input type="password" id="passwordInput" placeholder="Password">
+        <button onclick="checkPassword()">Enter</button>
+    </div>
+
+    <div id="portal">
+        <h1>🪐 Space Portal</h1>
+        <a href="https://neal.fun/?ref=sidebar" target="_blank">Neal Fun</a>
+        <a href="https://altao.azureedge.net/" target="_blank">Altao</a>
+        <a href="https://www.crazygames.com/" target="_blank">Crazy Games</a>
+        <a href="https://drippy-cat.github.io/snowrider3D/" target="_blank">Snow Rider 3D</a>
+        <a href="https://pol1.st.ggtyler.dev/" target="_blank">Poly 1</a>
+        <a href="https://script.google.com/a/macros/stu.hemetusd.org/s/AKfycbw8iHPqdVFEzquUYbNxFVAu1Tw4Nri5SWMRLdP_c7a84vCOHVG7YUWuhjSVptg1SVHr/exec" target="_blank">Drive Game</a>
+        <a href="https://gavan228.github.io/gaming/slope/index.html" target="_blank">Slope</a>
+        <a href="https://sellaknight.thecappuccino.site/index.html" target="_blank">SellaKnight</a>
+        <a href="https://gettingoverit.co/" target="_blank">Getting Over It</a>
+        <a href="https://reider71164.github.io/" target="_blank">Reider</a>
+        <a href="https://www.byronknoll.com/snake.html" target="_blank">Snake Game</a>
+        <a href="https://sellaknight.thecappuccino.site/semag/mind/index.html" target="_blank">Mind Game</a>
+        <a href="https://sellaknight.thecappuccino.site/semag/gladihoppers/index.html" target="_blank">Gladihoppers</a>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value;
+            if (input === 'gub') {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('portal').style.display = 'block';
+            } else {
+                alert('Incorrect password.');
+            }
+        }
+
+        function unlock() {
+            document.getElementById('login').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
